@@ -2,6 +2,12 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import Button from "@/components/Button/Button";
 
+export const metadata = {
+  title: "About",
+  description:
+    "Webcraft is a small web design and development studio building fast, accessible websites and apps.",
+};
+
 const About = () => {
   return (
     <div className={styles.container}>
@@ -23,34 +29,29 @@ const About = () => {
         <div className={styles.item}>
           <h1 className={styles.title}>Who Are We?</h1>
           <p className={styles.desc}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-            quae dolor, optio voluptatibus magnam iure esse tempora beatae. A
-            suscipit eos. Animi quibusdam cum omnis officiis voluptatum quo ea
-            eveniet? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Ducimus quae dolor, optio voluptatibus magnam iure esse tempora
-            beatae, a suscipit eos. Animi quibusdam cum omnis officiis
+            Webcraft is a small web design and development studio. We help
+            founders, creators and local businesses turn a rough idea into a
+            website or app that looks great and is easy to use.
             <br />
             <br />
-            voluptatum quo ea eveniet? Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Ducimus quae dolor, optio voluptatibus magnam iure
-            esse tempora beatae, a suscipit eos. Animi quibusdam cum omnis
-            officiis voluptatum quo ea eveniet?
+            We work closely with every client, from the first sketch to launch
+            day and beyond. Clear communication, honest timelines and careful
+            attention to detail are how we earn long-term relationships, not
+            just one-off projects.
           </p>
         </div>
         <div className={styles.item}>
           <h1 className={styles.title}>What We Do?</h1>
           <p className={styles.desc}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-            quae dolor, optio voluptatibus magnam iure esse tempora beatae, a
-            suscipit eos. Animi quibusdam cum omnis officiis voluptatum quo ea
-            eveniet? Lorem ipsum dolor sit amet consectetur adipisicing elit. -
-            Creative Illustrations
+            We cover the whole journey from idea to launch:
             <br />
-            <br /> - Dynamic Websites
+            <br /> - Creative illustrations and brand visuals
             <br />
-            <br /> - Fast and Handy
+            <br /> - Dynamic, fast and accessible websites
             <br />
-            <br /> - Mobile Apps
+            <br /> - Mobile-friendly web apps
+            <br />
+            <br /> - Ongoing care, updates and support
           </p>
           <Button url="/contact" text="Contact" />
         </div>

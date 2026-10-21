@@ -3,6 +3,12 @@ import Link from "next/link";
 import styles from "./page.module.css";
 import { posts } from "./data.js";
 
+export const metadata = {
+  title: "Blog",
+  description:
+    "Practical notes on web design, performance and working with clients.",
+};
+
 const Blog = () => {
   return (
     <div className={styles.mainContainer}>

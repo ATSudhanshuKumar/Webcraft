@@ -10,8 +10,8 @@ export default function Home() {
           Better design for your digital products.
         </h1>
         <p className={styles.desc}>
-          Turning your Idea into Reality. We bring together the teams from the
-          global tech industry.
+          We design and build fast, accessible websites and apps that help your
+          business stand out, from the first sketch to launch day.
         </p>
         <Button url="/portfolio" text="See Our Works" />
       </div>

@@ -3,8 +3,9 @@ import Image from "next/image";
 import Button from "@/components/Button/Button";
 
 export const metadata = {
-  title: "Sudhanshu Contact Information",
-  description: "This is Contact Page",
+  title: "Contact",
+  description:
+    "Tell us about your project and we will reply within two working days.",
 };
 
 const Contact = () => {
@@ -21,11 +22,11 @@ const Contact = () => {
           />
         </div>
         <form className={styles.form}>
-          <input type="text" placeholder="name" className={styles.input} />
-          <input type="text" placeholder="email" className={styles.input} />
+          <input type="text" placeholder="Your name" className={styles.input} />
+          <input type="text" placeholder="Your email" className={styles.input} />
           <textarea
             className={styles.textArea}
-            placeholder="message"
+            placeholder="Tell us about your project"
             cols="30"
             rows="10"
           ></textarea>

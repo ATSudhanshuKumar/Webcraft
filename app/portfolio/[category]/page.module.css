@@ -2,6 +2,13 @@
   color: #53c28b;
 }
 
+.intro {
+  margin-top: 10px;
+  max-width: 700px;
+  font-size: 20px;
+  opacity: 0.85;
+}
+
 .item {
   display: flex;
   gap: 50px;

@@ -1,11 +1,14 @@
-import React from 'react'
+export const metadata = {
+  title: "Dashboard",
+};
 
 const Dashboard = () => {
   return (
     <div>
-      Dashboard
+      <h1>Dashboard</h1>
+      <p>Your projects, messages and account settings will live here. Account features are coming soon.</p>
     </div>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;
