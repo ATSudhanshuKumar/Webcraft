@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
@@ -19,15 +18,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className="theme dark" suppressHydrationWarning>
+    <html lang="en">
       <body className={inter.className}>
-        <Script
-          id="theme-init"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `try{document.documentElement.className="theme "+(localStorage.getItem("theme")||"dark")}catch(e){}`,
-          }}
-        />
         <ThemeProvider>
           <div className="container">
             <Navbar />

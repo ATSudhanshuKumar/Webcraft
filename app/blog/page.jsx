@@ -1,36 +1,40 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
-import { posts } from "./data.js";
 
-export const metadata = {
-  title: "Blog",
-  description:
-    "Practical notes on web design, performance and working with clients.",
-};
+async function getData() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
+    cache: "no-store",
+  });
 
-const Blog = () => {
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  return res.json();
+}
+
+
+const Blog = async () => {
+
+  const data = await getData();
   return (
     <div className={styles.mainContainer}>
-      {posts.map((post) => (
-        <Link
-          href={`/blog/${post.id}`}
-          className={styles.container}
-          key={post.id}
-        >
-          <div className={styles.imageContainer}>
-            <Image
-              src={post.img}
-              alt={post.imgAlt}
-              width={400}
-              height={250}
-              className={styles.image}
+      {data.map((item) => (
+        <Link href={`/blog/${item.id}`} className={styles.container} key={item.id}>
+          <div className={styles.imageContainer}> 
+            <Image 
+             src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg"
+             alt= ""
+             width={400}
+             height={250}
+             className={styles.image}
             />
           </div>
 
           <div className={styles.content}>
-            <h2 className={styles.title}>{post.title}</h2>
-            <p className={styles.description}>{post.desc}</p>
+            <h1 className={styles.title}>{item.title}</h1>
+            <p className={styles.desc}>{item.body}</p>
           </div>
         </Link>
       ))}

@@ -1,9 +1,10 @@
 "use client";
-import { useTheme } from "@/context/ThemeContext";
+import { useContext } from "react";
+import { ThemeContext } from "@/context/ThemeContext";
 import styles from "./darkModeToogle.module.css";
 
 const DarkModeToggle = () => {
-  const { toggle } = useTheme();
+  const { toggle } = useContext(ThemeContext);
 
   return (
     <button

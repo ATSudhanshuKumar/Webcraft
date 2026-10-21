@@ -1,39 +1,19 @@
 "use client";
-import { createContext, useContext, useSyncExternalStore } from "react";
 
-const ThemeContext = createContext({ mode: "dark", toggle: () => {} });
+import { createContext, useState } from "react";
 
-// <html class="theme light|dark"> is the source of truth; the inline script in layout.tsx sets it before paint
-const subscribe = (callback) => {
-  const observer = new MutationObserver(callback);
-  observer.observe(document.documentElement, {
-    attributes: true,
-    attributeFilter: ["class"],
-  });
-  return () => observer.disconnect();
-};
-
-const getSnapshot = () =>
-  document.documentElement.classList.contains("light") ? "light" : "dark";
-
-const getServerSnapshot = () => "dark";
+export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  const mode = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+  const [mode, setMode] = useState("dark");
 
   const toggle = () => {
-    const next = mode === "dark" ? "light" : "dark";
-    document.documentElement.className = `theme ${next}`;
-    try {
-      localStorage.setItem("theme", next);
-    } catch {}
+    setMode((prev) => (prev === "dark" ? "light" : "dark"));
   };
 
   return (
-    <ThemeContext.Provider value={{ mode, toggle }}>
-      {children}
+    <ThemeContext.Provider value={{ toggle, mode }}>
+      <div className={`theme ${mode}`}>{children}</div>
     </ThemeContext.Provider>
   );
 };
-
-export const useTheme = () => useContext(ThemeContext);
