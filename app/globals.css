@@ -10,33 +10,13 @@ body {
   overflow-x: hidden;
 }
 
-/* keep the page edges and overscroll in the same color as the theme */
-html {
-  background-color: #111;
-}
-
-html:has(.light) {
-  background-color: white;
-}
-
-
 a {
-  color: inherit;
   text-decoration: none;
+  color: inherit;
 }
 
-.container{
-  max-width: 1366px;
-  min-height: 100vh;
-  margin: 0 auto;
-  padding: 0 60px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.theme.animated {
-  transition: background-color 0.5s ease, color 0.5s ease;
+.theme {
+  transition: 1s all ease;
 }
 
 .light {
@@ -47,4 +27,14 @@ a {
 .dark {
   background-color: #111;
   color: #bbb;
+}
+
+.container {
+  max-width: 1366px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
