@@ -10,6 +10,15 @@ body {
   overflow-x: hidden;
 }
 
+/* keep the page edges and overscroll in the same color as the theme */
+html {
+  background-color: #111;
+}
+
+html:has(.light) {
+  background-color: white;
+}
+
 
 a {
   color: inherit;
@@ -26,8 +35,8 @@ a {
   justify-content: space-between;
 }
 
-.theme{
-  transition: 1s all ease;
+.theme.animated {
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .light {

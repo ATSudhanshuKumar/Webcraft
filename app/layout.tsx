@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { cookies } from "next/headers";
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
@@ -17,15 +16,11 @@ export const metadata: Metadata = {
     "Webcraft designs and builds fast, accessible websites and apps for founders, creators and growing businesses.",
 };
 
-export default async function RootLayout({ children }: LayoutProps<"/">) {
-  const cookieStore = await cookies();
-  const initialMode =
-    cookieStore.get("theme")?.value === "light" ? "light" : "dark";
-
+export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ThemeProvider initialMode={initialMode}>
+        <ThemeProvider>
           <div className="container">
             <Navbar />
             {children}

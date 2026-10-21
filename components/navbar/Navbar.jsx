@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import styles from "./navbar.module.css";
-import DarkModeToggle from "../DarkModeToogle/DarkModeToogle";
+import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
 
 const links = [
   {
