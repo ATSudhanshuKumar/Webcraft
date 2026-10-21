@@ -1,9 +1,9 @@
 import Image from "next/image";
-import Link from "next/link";
 import styles from "./page.module.css";
+import { notFound } from "next/navigation";
 
-async function getData() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
+async function getData(id) {
+  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
     cache: "no-store",
   });
 
@@ -14,7 +14,8 @@ async function getData() {
   return res.json();
 }
 
-const BlogPost = () => {
+const BlogPost = async ({ params }) => {
+  const data = await getData(params.id);
   return (
     <div className={styles.mainContainer}>
       <div className={styles.top}>
@@ -46,7 +47,7 @@ const BlogPost = () => {
             fill={true}
             className={styles.image}
           />
-        </div>  
+        </div>
       </div>
       <div className={styles.content}>
         <p>
