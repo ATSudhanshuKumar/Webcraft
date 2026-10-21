@@ -1,8 +1,8 @@
-export const metadata = {
-  title: "Dashboard",
-};
+import styles from "./page.module.css";
 
 const Dashboard = () => {
+
+  const [data, setData] = useState([]);
   return (
     <div>
       <h1>Dashboard</h1>
