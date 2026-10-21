@@ -1,63 +1,65 @@
-import React from "react";
-import styles from "./page.module.css";
 import Image from "next/image";
-import { notFound } from "next/navigation";
+import Link from "next/link";
+import styles from "./page.module.css";
 
-async function getData(id) {
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
+async function getData() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
     cache: "no-store",
   });
 
   if (!res.ok) {
-    return notFound()
+    return notFound();
   }
 
   return res.json();
 }
 
-
-export async function generateMetadata({ params }) {
-
-  const post = await getData(params.id)
-  return {
-    title: post.title,
-    description: post.desc,
-  };
-}
-
-const BlogPost = async ({ params }) => {
-  const data = await getData(params.id);
+const BlogPost = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.mainContainer}>
       <div className={styles.top}>
         <div className={styles.info}>
-          <h1 className={styles.title}>{data.title}</h1>
+          <h1 className={styles.title}>Blog Post Title</h1>
           <p className={styles.desc}>
-            {data.desc}
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+            euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget
+            aliquam nunc nisl euismod nunc. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt,
+            nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nunc.
           </p>
           <div className={styles.author}>
             <Image
-              src={data.img}
+              src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg"
               alt=""
               width={40}
               height={40}
               className={styles.avatar}
             />
-            <span className={styles.username}>{data.username}</span>
+            <span className={styles.username}>John Doe</span>
           </div>
         </div>
+
         <div className={styles.imageContainer}>
           <Image
-            src={data.img}
+            src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg"
             alt=""
             fill={true}
             className={styles.image}
           />
-        </div>
+        </div>  
       </div>
       <div className={styles.content}>
-        <p className={styles.text}>
-         {data.content}
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod,
+          nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc
+          nisl euismod nunc. Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl,
+          eget aliquam nunc nisl euismod nunc. Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt,
+          nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nunc. Lorem
+          ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc
+          ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl
+          euismod nunc.
         </p>
       </div>
     </div>
