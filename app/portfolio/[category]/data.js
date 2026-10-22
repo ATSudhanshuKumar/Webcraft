@@ -4,7 +4,7 @@ export const items = {
       id: 1,
       title: "Taskly Team Planner",
       desc:
-        "A shared task board for small teams, with drag-and-drop lists, due-date reminders and a clean mobile view so work moves forward from any device.",
+        "Chaos ko checklist banao. Drag, drop, done: teams ek hi board par kaam baantte hain, deadline se pehle nudge paate hain, aur phone par bhi sab smooth chalta hai.",
       image:
         "https://images.pexels.com/photos/3194521/pexels-photo-3194521.jpeg",
     },
@@ -12,7 +12,7 @@ export const items = {
       id: 2,
       title: "LearnPath Study App",
       desc:
-        "A learning companion that turns a course into daily bite-sized lessons, tracks progress with simple streaks and works offline for commuting students.",
+        "Bada course, chhote lessons. Roz ek bite-sized step, streaks jo motivation zinda rakhein, aur offline mode taaki bus ya metro mein bhi padhai na ruke.",
       image:
         "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg",
     },
@@ -20,7 +20,7 @@ export const items = {
       id: 3,
       title: "DevNotes Snippet Manager",
       desc:
-        "A fast, searchable library for code snippets and notes, with tags, syntax highlighting and one-click copy for developers who reuse the same patterns.",
+        "Wahi code baar baar mat likho. Snippets ko tag karo, second mein dhundo, ek click mein copy karo, aur syntax highlighting ke saath apna personal code vault banao.",
       image:
         "https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg",
     },
@@ -30,7 +30,7 @@ export const items = {
       id: 1,
       title: "Street Stories Mural Series",
       desc:
-        "A set of bold mural-style illustrations created for a city arts festival, using layered color and hand-drawn texture to celebrate local characters.",
+        "Deewaron par bolti kahaniyan. Ek city arts festival ke liye bani bold murals, jahan rang ki layers aur haath se bani texture local logon ko hero banati hain.",
       image:
         "https://images.pexels.com/photos/3130810/pexels-photo-3130810.jpeg",
     },
@@ -38,7 +38,7 @@ export const items = {
       id: 2,
       title: "Portrait Collection",
       desc:
-        "Character portraits with expressive eyes and a limited teal and pink palette, designed for a children's book cover and its matching poster set.",
+        "Aankhein jo kahani sunati hain. Teal aur pink ke limited palette mein bane character portraits, ek children's book cover aur uske poster set ke liye.",
       image:
         "https://images.pexels.com/photos/2103127/pexels-photo-2103127.jpeg",
     },
@@ -46,7 +46,7 @@ export const items = {
       id: 3,
       title: "Minimal Morning Poster",
       desc:
-        "A playful minimalist poster that turns a cup of coffee into a clock, built for a cafe brand to use on menus, cups and social media.",
+        "Coffee ka cup, aur andar chhupi ghadi. Ek cafe brand ke liye bana playful minimal poster jo menu, cups aur social media par ek hi smile ke saath fit baithta hai.",
       image:
         "https://images.pexels.com/photos/2916450/pexels-photo-2916450.jpeg",
     },
@@ -56,25 +56,25 @@ export const items = {
       id: 1,
       title: "Studio Folio Portfolio",
       desc:
-        "A portfolio site for a freelance designer, planned from paper wireframes into a fast, image-first layout that makes every project easy to browse.",
+        "Kaam khud bole. Paper wireframe se nikla ek freelance designer ka image-first portfolio, jahan har project ek scroll mein samajh aata hai aur page tezi se khulta hai.",
       image:
-        "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg",
+        "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg",
     },
     {
       id: 2,
       title: "CodeCraft Learning Hub",
       desc:
-        "A course platform with a clear lesson structure, readable code blocks and a lightweight design that stays quick on slow connections.",
+        "Seekhna ho toh seedha, saaf aur fast. Clear lesson flow, padhne mein aasaan code blocks, aur halka design jo slow internet par bhi bina atke chalta hai.",
       image:
-        "https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg",
+        "https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg",
     },
     {
       id: 3,
       title: "Strong Together Charity",
       desc:
-        "A donation-focused website for a community charity, with a simple story, one clear call to action and a checkout flow that takes under a minute.",
+        "Ek kahani, ek button, ek minute. Community charity ki donation website jo seedhi baat karti hai aur checkout itna aasaan rakhti hai ki madad karna mushkil na lage.",
       image:
-        "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg",
+        "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
     },
   ],
 };
@@ -82,14 +82,14 @@ export const items = {
 export const categories = {
   applications: {
     title: "Applications",
-    desc: "Web and mobile apps built around one clear job, with fast screens, simple flows and a design that feels natural on every device.",
+    desc: "Ek kaam, bilkul sahi tareeke se. Tez screens, simple flows aur aisa design jo har device par apna sa lage.",
   },
   illustrations: {
     title: "Illustrations",
-    desc: "Hand-crafted illustrations and posters that give a brand its own personality, from bold murals to playful minimal designs.",
+    desc: "Rang, line aur personality. Bold murals se lekar playful minimal posters tak, aise visuals jo brand ko apni alag pehchaan dein.",
   },
   websites: {
     title: "Websites",
-    desc: "Fast, accessible websites planned from the first sketch, designed to explain what you do and turn visitors into customers.",
+    desc: "Pehle sketch, phir pixels. Fast aur accessible sites jo aapka kaam saaf samjhayein aur visitors ko customers mein badal dein.",
   },
 };
