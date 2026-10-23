@@ -1,7 +1,16 @@
 import { NextResponse } from "next/server";
 
-export const GET = async (request) => {
-  // fetch
+import connect from "../../../utils/db";
+import Post from "../../../models/Post";
 
-  return new NextResponse("It works", { status: 200 });
+export const GET = async (request) => {
+  try {
+    await connect();
+
+    const posts = await Post.find();
+
+    return new NextResponse(posts, { status: 200 });
+  } catch (err) {
+    return new NextResponse("Database Error", { status: 500 });
+  }
 };
