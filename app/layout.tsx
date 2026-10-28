@@ -9,12 +9,8 @@ import ThemeProvider from "@/providers/ThemeProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: {
-    default: "Webcraft | Web design and development",
-    template: "%s | Webcraft",
-  },
-  description:
-    "Webcraft designs and builds fast, accessible websites and apps for founders, creators and growing businesses.",
+  title: "Sudhu Dev",
+  description: "This is the description",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

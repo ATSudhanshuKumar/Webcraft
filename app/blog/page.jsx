@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
+import { title } from "process";
 
 async function getData() {
   const res = await fetch("http://localhost:3000/api/posts", {
@@ -14,15 +15,27 @@ async function getData() {
   return res.json();
 }
 
+export async function generateMetaData({ params }) {
+  const post = await getData(params.id);
+  return {
+    title: post.title,
+    description: post.desc,
+  };
+}
+
 const Blog = async () => {
   const data = await getData();
   return (
     <div className={styles.mainContainer}>
       {data.map((item) => (
-        <Link href="/blog/testId" className={styles.container} key={item._id}>
+        <Link
+          href={`/blog/${item._id}`}
+          className={styles.container}
+          key={item._id}
+        >
           <div className={styles.imageContainer}>
             <Image
-              src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg"
+              src={item.img}
               alt=""
               width={400}
               height={250}
@@ -32,7 +45,7 @@ const Blog = async () => {
 
           <div className={styles.content}>
             <h1 className={styles.title}>{item.title}</h1>
-            <p className={styles.desc}>{item.body}</p>
+            <p className={styles.desc}>{item.desc}</p>
           </div>
         </Link>
       ))}

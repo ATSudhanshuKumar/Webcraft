@@ -2,10 +2,9 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import Button from "@/components/Button/Button";
 
-export const metadata = {
-  title: "Contact",
-  description:
-    "Tell us about your project and we will reply within two working days.",
+export const Metadata = {
+  title: "Sudhu Dev Contact Information",
+  description: "This is Contact Page",
 };
 
 const Contact = () => {
@@ -23,14 +22,18 @@ const Contact = () => {
         </div>
         <form className={styles.form}>
           <input type="text" placeholder="Your name" className={styles.input} />
-          <input type="text" placeholder="Your email" className={styles.input} />
+          <input
+            type="text"
+            placeholder="Your email"
+            className={styles.input}
+          />
           <textarea
             className={styles.textArea}
             placeholder="Tell us about your project"
             cols="30"
             rows="10"
           ></textarea>
-          <Button url="#" text="Send"/>
+          <Button url="#" text="Send" />
         </form>
       </div>
     </div>
